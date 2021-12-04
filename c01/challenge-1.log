@@ -1,0 +1,52 @@
+%%%% Starting test challenge-1
+Group begin: challenge-1
+Test begin:
+  source-file: "c01-test.scm"
+  source-line: 19
+  source-form: (test-equal input-data-reference (parse-input "test-input.txt"))
+Test end:
+  result-kind: pass
+  actual-value: (199 200 208 210 200 207 240 269 260 263)
+  expected-value: (199 200 208 210 200 207 240 269 260 263)
+Test begin:
+  source-file: "c01-test.scm"
+  source-line: 20
+  source-form: (test-equal input-data-reference (parse-input "test-input-garbled.txt"))
+Test end:
+  result-kind: pass
+  actual-value: (199 200 208 210 200 207 240 269 260 263)
+  expected-value: (199 200 208 210 200 207 240 269 260 263)
+Test begin:
+  source-file: "c01-test.scm"
+  source-line: 24
+  source-form: (test-equal (quote ((1 . 2) (2 . 3) (3 . 4))) (part (quote (1 2 3 4))))
+Test end:
+  result-kind: pass
+  actual-value: ((1 . 2) (2 . 3) (3 . 4))
+  expected-value: ((1 . 2) (2 . 3) (3 . 4))
+Test begin:
+  source-file: "c01-test.scm"
+  source-line: 27
+  source-form: (test-equal (quote (#:inc #:inc #:dec #:inc #:dec #:dec)) (inc-dec (quote (123 213 943 439 500 45 45))))
+Test end:
+  result-kind: pass
+  actual-value: (#:inc #:inc #:dec #:inc #:dec #:dec)
+  expected-value: (#:inc #:inc #:dec #:inc #:dec #:dec)
+Test begin:
+  source-file: "c01-test.scm"
+  source-line: 29
+  source-form: (test-equal (count-increases (parse-input "test-input.txt")) 7)
+Test end:
+  result-kind: pass
+  actual-value: 7
+  expected-value: 7
+Test begin:
+  source-file: "c01-test.scm"
+  source-line: 31
+  source-form: (test-equal (#{3-part}# (list 1 2 3 4 5)) (list (quote (1 2 3)) (quote (2 3 4)) (quote (3 4 5))))
+Test end:
+  result-kind: pass
+  actual-value: ((1 2 3) (2 3 4) (3 4 5))
+  expected-value: ((1 2 3) (2 3 4) (3 4 5))
+Group end: challenge-1
+# of expected passes      6
